@@ -71,7 +71,7 @@
     "testFiles": [],
     "public": true,
     "targetVersions": {
-        "target": "1.7.25",
+        "target": "2.0.30",
         "targetId": "minecraft"
     },
     "supportedTargets": [
