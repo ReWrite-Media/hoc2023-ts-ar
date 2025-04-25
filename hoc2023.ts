@@ -1,15 +1,15 @@
 //enums
 enum FourDirectionArrows {
-    //% blockIdentity="blocks.custom" enumval=986 block="Arrow Up Orange"
+    //% blockIdentity="blocks.custom" enumval=986 block="سهم لأعلى باللون البرتقالي"
     //% jres alias=ARROW_UP_ORANGE
     ArrowUpOrange = 986,
-    //% blockIdentity="blocks.custom" enumval=985 block="Arrow Down Magenta"
+    //% blockIdentity="blocks.custom" enumval=985 block="سهم لأسفل باللون الأرجواني"
     //% jres alias=ARROW_DOWN_MAGENTA
     ArrowDownMagenta = 985,
-    //% blockIdentity="blocks.custom" enumval=984 block="Arrow Right Yellow"
+    //% blockIdentity="blocks.custom" enumval=984 block="سهم لليسار باللون الأزرق"
     //% jres alias=ARROW_RIGHT_YELLOW
     ArrowRightYellow = 984,
-    //% blockIdentity="blocks.custom" enumval=983 block="Arrow Left Blue"
+    //% blockIdentity="blocks.custom" enumval=983 block="سهم لليمين باللون الأصفر"
     //% jres alias=ARROW_LEFT_BLUE
     ArrowLeftBlue = 983
 }
@@ -30,20 +30,20 @@ enum PrinceBadges {
 }
 
 enum UpDown {
-    //% block="up"
+    //% block="للأعلى"
     Up = SixDirection.Up,
-    //% block="down"
+    //% block="للاسفل"
     Down = SixDirection.Down
 }
 
 enum ForwardBackUpDown {
-    //% block="forward"
+    //% block="إلى الأمام"
     Forward = SixDirection.Forward,
-    //% block="back"
+    //% block="خلف"
     Back = SixDirection.Back,
-    //% block="up"
+    //% block="للأعلى"
     Up = SixDirection.Up,
-    //% block="down"
+    //% block="للاسفل"
     Down = SixDirection.Down
 }
 
@@ -128,14 +128,14 @@ namespace hoc2023 {
     /**
      * Trash
      */
-    //% block="trash"
+    //% block="نفاية"
     export function scene3_Garbage(): boolean {
         return true;
     }
     /**
      * Battery
      */
-    //% block="battery"
+    //% block="بطارية"
     export function scene3_Battery(): number {
         return 0;
     }
@@ -355,7 +355,7 @@ namespace hoc2023Objectives {
     /**
      * Agent Move Direction
      */
-    //% block="`custom.agentMove` agent move %d"
+    //% block="`custom.agentMove` حرك الروبوت باتجاه %d"
     export function pillar_AgentMove(d: ForwardBackUpDown): void {
         agent.move(d, 1)
     }
@@ -386,7 +386,7 @@ namespace hoc2023Objectives {
     /**
      * Cut grass without checking
      */
-    //% block="`custom.cutGrass` cut grass"
+    //% block="`custom.cutGrass` قطع العشب"
     export function scene2_GrassCut(): void {
         pause()
         player.execute("scoreboard players set .output global 1")
