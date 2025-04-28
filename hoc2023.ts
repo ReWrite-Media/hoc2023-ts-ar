@@ -15,16 +15,16 @@ enum FourDirectionArrows {
 }
 
 enum PrinceBadges {
-    //% blockIdentity="blocks.custom" enumval=986 block="Fairness and Inclusiveness"
+    //% blockIdentity="blocks.custom" enumval=986 block="العدالة والشمولية"
     //% jres alias=FAIRNESS_INCLUSIVENESS
     FairnessInclusiveness = 986,
-    //% blockIdentity="blocks.custom" enumval=985 block="Privacy and Security"
+    //% blockIdentity="blocks.custom" enumval=985 block="الخصوصية والأمان"
     //% jres alias=PRIVACY_SECURITY
     PrivacySecurity = 985,
-    //% blockIdentity="blocks.custom" enumval=984 block="Reliability and Safety"
+    //% blockIdentity="blocks.custom" enumval=984 block="الموثوقية والسلامة"
     //% jres alias=RELIABILITY_SAFETY
     ReliabilitySafety = 984,
-    //% blockIdentity="blocks.custom" enumval=983 block="Transparency and Accountability"
+    //% blockIdentity="blocks.custom" enumval=983 block="الشفافية والمساءلة"
     //% jres alias=TRANSPARENCE_ACCOUNTABILITY
     TransparencyAccountability = 983
 }
@@ -48,18 +48,18 @@ enum ForwardBackUpDown {
 }
 
 enum Scene1_Scan {
-    //% block="horizontally"
+    //% block="أفقيا"
     Horizontally = 1,
-    //% block="smart"
+    //% block="ذكي"
     Smart = 4
 }
 
 enum Scene4_UserLevel {
-    //% block="anyone"
+    //% block="أي شخص"
     Anyone,
-    //% block="user"
+    //% block="مستخدم"
     User,
-    //% block="admin"
+    //% block="مشرف"
     Admin
 }
 
@@ -72,7 +72,7 @@ namespace hoc2023 {
     /**
      * Loop during lunch time
      */
-    //% block="lunch time"
+    //% block="lوقت الغداء"
     export function scene1_LunchTime(): boolean {
         return true;
     }
@@ -80,7 +80,7 @@ namespace hoc2023 {
     /**
      * Detect Student
      */
-    //% block="`custom.studentFound` student found"
+    //% block="`custom.studentFound` تم العثور على الطالب "
     export function scene1_DetectStudent(): boolean {
         return true;
     }
@@ -88,7 +88,7 @@ namespace hoc2023 {
     /**
      * Serve Lunch
      */
-    //% block="`custom.serveLunch` serve lunch"
+    //% block="`custom.serveLunch` تقديم الغداء"
     export function scene1_ServeLunch(): void {
         player.execute("scoreboard players set .output global 3")
     }
@@ -96,14 +96,14 @@ namespace hoc2023 {
     /**
      * Wait for next student
      */
-    //% block="`custom.waitingClock` wait for next student"
+    //% block="`custom.waitingClock` انتظر الطالب التالي"
     export function scene1_WaitStudent(): void {
         player.execute("scoreboard players set .output global 4")
     }
     /**
      * Move lawnmower to next row
      */
-    //% block="`custom.lawnmowerNewRow` start next row"
+    //% block="`custom.lawnmowerNewRow` ابدأ بالصف التالي"
     export function scene2_LawnmowerNextRow(): void {
         pause()
         player.execute("scoreboard players set .output global 3")
@@ -113,7 +113,7 @@ namespace hoc2023 {
     /**
      * Move lawnmower forward
      */
-    //% block="`custom.lawnmowerForward` move lawnmower forward"
+    //% block="`custom.lawnmowerForward` حرك جزازة العشب للأمام"
     export function scene2_LawnmowerMoveForward(): void {
         pause()
         player.execute("scoreboard players set .output global 3")
@@ -121,7 +121,7 @@ namespace hoc2023 {
     /**
      * Search for trash
      */
-    //% block="search for trash"
+    //% block="ابحث عن النفايات"
     export function scene3_SearchForGarbage(): boolean {
         return true;
     }
@@ -142,14 +142,14 @@ namespace hoc2023 {
     /**
      * Charging
      */
-    //% block="charging"
+    //% block="يشحن"
     export function scene3_Charging(): boolean {
         return false;
     }
     /**
      * Pickup trash
      */
-    //% block="pickup trash"
+    //% block="التقط النفايات"
     export function scene3_PickupGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 1")
@@ -157,7 +157,7 @@ namespace hoc2023 {
     /**
      * Move trash
      */
-    //% block="move trash"
+    //% block="نقل النفايات"
     export function scene3_MoveGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 2")
@@ -165,7 +165,7 @@ namespace hoc2023 {
     /**
      * Drop trash
      */
-    //% block="drop trash"
+    //% block="اسقط النفايات"
     export function scene3_DropGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -173,7 +173,7 @@ namespace hoc2023 {
     /**
      * Find utility box
      */
-    //% block="find utility box"
+    //% block="ابحث عن صندوق الأدوات"
     export function scene3_FindUtilityBox(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -181,7 +181,7 @@ namespace hoc2023 {
     /**
      * Start charging
      */
-    //% block="start charging"
+    //% block="بدء الشحن"
     export function scene3_StartCharging(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -189,7 +189,7 @@ namespace hoc2023 {
     /**
      * Stop Charging
      */
-    //% block="stop charging"
+    //% block="ايقاف الشحن"
     export function scene3_StopCharging(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -197,7 +197,7 @@ namespace hoc2023 {
     /**
      * Continue flight loop
      */
-    //% block="continue flight loop"
+    //% block="واصل دورة الطيران"
     export function scene3_ContinueFlightLoop(): void {
         pause()
         player.execute("scoreboard players set .output global 7")
@@ -205,7 +205,7 @@ namespace hoc2023 {
     /**
      * Fly to dumpster
      */
-    //% block="fly to dumpster"
+    //% block="طر نحو الحاوية"
     export function scene3_TakeToDumpster(): void {
         pause()
         player.execute("scoreboard players set .output global 8")
@@ -213,7 +213,7 @@ namespace hoc2023 {
     /**
      * Release trash
      */
-    //% block="release trash"
+    //% block="اطلق النفايات"
     export function scene3_RecycleGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 9")
@@ -225,7 +225,7 @@ namespace hoc2023 {
     /**
      * Checks for human detection
      */
-    //% block="human detected"
+    //% block="تم رصد انسان"
     export function scene4_HumanDetected(): boolean {
         return true;
     }
@@ -233,7 +233,7 @@ namespace hoc2023 {
     /**
     * Checks is user is authorized
     */
-    //% block="user authorized"
+    //% block="المستخدم مصرح له"
     export function scene4_UserAuthorized(): boolean {
         return true;
     }
@@ -241,7 +241,7 @@ namespace hoc2023 {
     /**
     * Return user permissions
     */
-    //% block="user permissions"
+    //% block="صلاحيات المستخدم"
     export function scene4_UserPermissions(): boolean {
         return true;
     }
@@ -249,7 +249,7 @@ namespace hoc2023 {
     /**
     * Check if door closed
     */
-    //% block="door closed"
+    //% block="الباب مغلق"
     export function scene4_DoorClosed(): boolean {
         return true;
     }
@@ -257,7 +257,7 @@ namespace hoc2023 {
     /**
      * Check user permissions
      */
-    //% block="check user permissions"
+    //% block="تحقق من صلاحيات المستخدم"
     export function scene4_CheckUserPermissions(): void {
         pause()
         player.execute("scoreboard players set .output global 3")
@@ -266,7 +266,7 @@ namespace hoc2023 {
     /**
      * Enable log viewing
      */
-    //% block="`custom.greenCheck` enable log viewing"
+    //% block="تمكين عرض السجل `custom.greenCheck`"
     export function scene4_EnableLogViewing(): void {
         pause()
         player.execute("scoreboard players set .output global 1")
@@ -283,7 +283,7 @@ namespace hoc2023 {
     /**
      * Disable log viewing
      */
-    //% block="`custom.redX` disable log viewing"
+    //% block="تعطيل عرض السجل `custom.redX`"
     export function scene4_DisableLogViewing(): void {
         pause()
         player.execute("scoreboard players set .output global 2")
@@ -300,7 +300,7 @@ namespace hoc2023 {
     /**
      * Log unauthorized event
      */
-    //% block="`custom.redX` log unauthorized event"
+    //% block="`custom.redX` تسجيل حدث غير مصرح به"
     export function scene4_LogUnauthorizedEvent(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -309,7 +309,7 @@ namespace hoc2023 {
     /**
      * Log authorized event
      */
-    //% block="`custom.greenCheck` log authorized event"
+    //% block="`custom.greenCheck` تسجيل حدث مصرح به"
     export function scene4_LogAuthorizedEvent(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -318,7 +318,7 @@ namespace hoc2023 {
     /**
      * Lock door
      */
-    //% block="lock door"
+    //% block="قفل الباب"
     export function scene4_LockDoor(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -327,7 +327,7 @@ namespace hoc2023 {
     /**
      * Unlock door
      */
-    //% block="unlock door"
+    //% block="فتح الباب"
     export function scene4_UnlockDoor(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -336,7 +336,7 @@ namespace hoc2023 {
     /**
      * Wait before locking
      */
-    //% block="`custom.waitingClock` wait %num minutes"
+    //% block="`custom.waitingClock` انتظر %num دقائق"
     export function scene4_WaitMinutes(num: number): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -364,7 +364,7 @@ namespace hoc2023Objectives {
     /**
      * Agent Place Block
      */
-    //% block="`custom.place` agent place `block.PinkWool` %d"
+    //% block="`custom.place` الروبوت يضع `block.PinkWool` %d"
     export function pillar_AgentPlacePinkWoolBlock(d: UpDown): void {
         agent.setItem(PURPLE_WOOL, 1, 1)
         agent.setSlot(1)
@@ -374,7 +374,7 @@ namespace hoc2023Objectives {
     /**
      * Scan for student
      */
-    //% block="`custom.scanning` scan %scan_type"
+    //% block="`custom.scanning` مسح %scan_type"
     export function scene1_Scan(scan_type: Scene1_Scan): void {
         if (scan_type == Scene1_Scan.Smart) {
             player.execute("scoreboard players set .output global 2")
@@ -394,7 +394,7 @@ namespace hoc2023Objectives {
     /**
      * Check for sprinkler before cutting
      */
-    //% block="`custom.cutgrassNoSprinkler` if no sprinkler, cut grass"
+    //% block="`custom.cutgrassNoSprinkler` إذا لم يوجد رشاش ماء، قص العشب"
     export function scene2_CheckSprinklerGrassCut(): void {
         pause()
         player.execute("scoreboard players set .output global 2")
@@ -402,7 +402,7 @@ namespace hoc2023Objectives {
     /**
      * Move trash
      */
-    //% block="move trash"
+    //% block="نقل النفايات"
     export function scene3_MoveGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 2")
@@ -410,7 +410,7 @@ namespace hoc2023Objectives {
     /**
      * Drop trash
      */
-    //% block="drop trash"
+    //% block="اسقط النفايات"
     export function scene3_DropGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -418,7 +418,7 @@ namespace hoc2023Objectives {
     /**
      * Fly to dumpster
      */
-    //% block="fly to dumpster"
+    //% block="طر نحو الحاوية"
     export function scene3_TakeToDumpster(): void {
         pause()
         player.execute("scoreboard players set .output global 8")
@@ -426,7 +426,7 @@ namespace hoc2023Objectives {
     /**
      * Release trash
      */
-    //% block="release trash"
+    //% block="اطلق النفايات"
     export function scene3_RecycleGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 9")
@@ -457,21 +457,21 @@ namespace hoc2023Disable {
     /**
      * Search for trash
      */
-    //% block="search for trash"
+    //% block="ابحث عن النفايات"
     export function scene3_SearchForGarbage(): boolean {
         return true;
     }
     /**
      * Search for 101101
      */
-    //% block="search for 101101"
+    //% block="ابحث عن 101101"
     export function scene3_ObSearchForGarbage(): boolean {
         return true;
     }
     /**
      * Trash
      */
-    //% block="trash"
+    //% block="النفايات"
     export function scene3_Garbage(): boolean {
         return true;
     }
@@ -485,21 +485,21 @@ namespace hoc2023Disable {
     /**
      * Battery
      */
-    //% block="battery"
+    //% block="بطارية"
     export function scene3_Battery(): number {
         return 0;
     }
     /**
      * Charging
      */
-    //% block="charging"
+    //% block="يشحن"
     export function scene3_Charging(): boolean {
         return false;
     }
     /**
      * Pickup trash
      */
-    //% block="pickup trash"
+    //% block="التقط النفايات"
     export function scene3_PickupGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 1")
@@ -507,7 +507,7 @@ namespace hoc2023Disable {
     /**
      * Pickup 101101
      */
-    //% block="pickup 101101"
+    //% block="101101 التقط"
     export function scene3_ObPickupGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 1")
@@ -515,7 +515,7 @@ namespace hoc2023Disable {
     /**
      * Move trash
      */
-    //% block="move trash"
+    //% block="نقل النفايات"
     export function scene3_MoveGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 2")
@@ -523,7 +523,7 @@ namespace hoc2023Disable {
     /**
      * Move 101101
      */
-    //% block="move 101101"
+    //% block="101101 نقل"
     export function scene3_ObMoveGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 2")
@@ -531,7 +531,7 @@ namespace hoc2023Disable {
     /**
      * Drop trash
      */
-    //% block="drop trash"
+    //% block="اسقط النفايات"
     export function scene3_DropGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -539,7 +539,7 @@ namespace hoc2023Disable {
     /**
      * Drop 101101
      */
-    //% block="drop 101101"
+    //% block="101101 اسقط"
     export function scene3_ObDropGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -547,7 +547,7 @@ namespace hoc2023Disable {
     /**
      * Find utility box
      */
-    //% block="find utility box"
+    //% block="ابحث عن صندوق الأدوات"
     export function scene3_FindUtilityBox(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -555,7 +555,7 @@ namespace hoc2023Disable {
     /**
      * Start charging
      */
-    //% block="start charging"
+    //% block="بدء الشحن"
     export function scene3_StartCharging(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -563,7 +563,7 @@ namespace hoc2023Disable {
     /**
      * Stop Charging
      */
-    //% block="stop charging"
+    //% block="ايقاف الشحن"
     export function scene3_StopCharging(): void {
         pause()
         player.execute("scoreboard players set .output global 0")
@@ -571,7 +571,7 @@ namespace hoc2023Disable {
     /**
      * Continue flight loop
      */
-    //% block="continue flight loop"
+    //% block="واصل دورة الطيران"
     export function scene3_ContinueFlightLoop(): void {
         pause()
         player.execute("scoreboard players set .output global 7")
@@ -579,7 +579,7 @@ namespace hoc2023Disable {
     /**
      * Fly to dumpster
      */
-    //% block="fly to dumpster"
+    //% block="طر نحو الحاوية"
     export function scene3_TakeToDumpster(): void {
         pause()
         player.execute("scoreboard players set .output global 8")
@@ -587,7 +587,7 @@ namespace hoc2023Disable {
     /**
      * Fly to 0110101011
      */
-    //% block="fly to 0110101011"
+    //% block="0110101011 طر نحو"
     export function scene3_ObTakeToDumpster(): void {
         pause()
         player.execute("scoreboard players set .output global 8")
@@ -595,7 +595,7 @@ namespace hoc2023Disable {
     /**
      * Release trash
      */
-    //% block="release trash"
+    //% block="اطلق النفايات"
     export function scene3_RecycleGarbage(): void {
         pause()
         player.execute("scoreboard players set .output global 9")
@@ -626,7 +626,7 @@ namespace hoc2023RedAgent {
     /**
      * Move red Agent
      */
-    //% block="`custom.redAgent` red agent move %d by %n"
+    //% block="`custom.redAgent` حرك الروبوت الأحمر نحو %d باستخدام %n"
     export function scene5_RedAgent(d: FourDirectionArrows, n: number): void {
         for (let i = 0; i < n; i++) {
             pause()
@@ -649,7 +649,7 @@ namespace hoc2023RedAgent {
     /**
      * Match red Agent
      */
-    //% block="`custom.redAgent` red agent match %p"
+    //% block="`custom.redAgent` تطابق الروبوت الأحمر %p"
     export function scene5_RedMatchAgent(p: PrinceBadges): void {
         pause()
         switch (p) {
@@ -677,7 +677,7 @@ namespace hoc2023YellowAgent {
     /**
      * Move yellow Agent
      */
-    //% block="`custom.yellowAgent` yellow agent move %d by %n"
+    //% block="`custom.yellowAgent` حرك الروبوت الأصفر نحو %d باستخدام %n"
     export function scene5_YellowAgent(d: FourDirectionArrows, n: number): void {
         for (let i = 0; i < n; i++) {
             pause()
@@ -700,7 +700,7 @@ namespace hoc2023YellowAgent {
     /**
      * Match yellow Agent
      */
-    //% block="`custom.yellowAgent` yellow agent match %p"
+    //% block="`custom.yellowAgent` يطابق الروبوت الأصفر %p"
     export function scene5_YellowMatchAgent(p: PrinceBadges): void {
         pause()
         switch (p) {
@@ -728,7 +728,7 @@ namespace hoc2023BlueAgent {
     /**
      * Move blue Agent
      */
-    //% block="`custom.blueAgent` blue agent move %d by %n"
+    //% block="`custom.blueAgent` حرك الروبوت الأزرق نحو %d باستخدام %n"
     export function scene5_BlueAgent(d: FourDirectionArrows, n: number): void {
         for (let i = 0; i < n; i++) {
             pause()
@@ -751,7 +751,7 @@ namespace hoc2023BlueAgent {
     /**
      * Match blue Agent
      */
-    //% block="`custom.blueAgent` blue agent match %p"
+    //% block="`custom.blueAgent` يطابق الروبوت الأزرق %p"
     export function scene5_BlueMatchAgent(p: PrinceBadges): void {
         pause()
         switch (p) {
@@ -780,7 +780,7 @@ namespace hoc2023GreenAgent {
     /**
      * Move green Agent
      */
-    //% block="`custom.greenAgent` green agent move %d by %n"
+    //% block="`custom.greenAgent` حرك الروبوت الأخضر نحو %d باستخدام %n"
     export function scene5_GreenAgent(d: FourDirectionArrows, n: number): void {
         for (let i = 0; i < n; i++) {
             pause()
@@ -803,7 +803,7 @@ namespace hoc2023GreenAgent {
     /**
      * Match green Agent
      */
-    //% block="`custom.greenAgent` green agent match %p"
+    //% block="`custom.greenAgent` يطابق الروبوت الأخضر %p"
     export function scene5_GreenMatchAgent(p: PrinceBadges): void {
         pause()
         switch (p) {
